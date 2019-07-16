@@ -35,10 +35,23 @@ public class Lab3 {
 		System.out.println(name + ", please make sure your number is between 1 and 100.");
 	    }
 
-	    System.out.println("Continue? (yes/no)");
-	    String confirmation = scan.next();
 
-	    userHasQuit = true;
+	    boolean valid = false;
+	    int counter = 0;
+	    while (!valid) {
+		if (counter > 0) {
+		    System.out.println("Please type \"yes\" or \"no\".");
+		}
+		System.out.println("Continue? (yes/no)");
+		String confirmation = scan.next();
+		if (confirmation.equalsIgnoreCase("yes")) {
+		    valid = true;
+		} else if (confirmation.equalsIgnoreCase("no")) {
+		    valid = true;
+		    userHasQuit = true;
+		}
+		counter++;
+	    }
 
 	    scan.nextLine();
 	}
