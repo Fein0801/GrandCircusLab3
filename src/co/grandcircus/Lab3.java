@@ -35,7 +35,6 @@ public class Lab3 {
 		System.out.println(name + ", please make sure your number is between 1 and 100.");
 	    }
 
-
 	    boolean valid = false;
 	    int counter = 0;
 	    while (!valid) {
